@@ -1623,7 +1623,11 @@ describe('Remote Frame Buffer Protocol Client', function() {
             });
 
             it('should send a key message on a key press', function () {
-                client._keyboard._onKeyPress(1234, 1);
+                var keyevent = {};
+                keyevent.type = 'keydown';
+                keyevent.keysym = {};
+                keyevent.keysym.keysym = 1234;
+                client._keyboard._onKeyPress(keyevent);
                 expect(client._sock.send).to.have.been.calledOnce;
                 var key_msg = RFB.messages.keyEvent(1234, 1);
                 expect(client._sock.send).to.have.been.calledWith(key_msg);
