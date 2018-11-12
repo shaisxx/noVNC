@@ -133,6 +133,6 @@ use a WebSockets to TCP socket proxy. There is a python proxy included
     
 ### Modify by Josh at 20181112
 ### Windows系统
-*进入***\noVNC\websockify目录
-*打开cmd命令提示符，执行  .\websockify.exe --web=../ 6080 192.168.24.2:5903
-*访问http://192.168.20.12:6080/vnc.html
+* 进入***\noVNC\websockify目录
+* 打开cmd命令提示符，执行  .\websockify.exe --web=../ 6080 192.168.24.2:5903
+* 访问http://192.168.20.12:6080/vnc.html
